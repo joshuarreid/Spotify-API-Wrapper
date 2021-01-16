@@ -4,17 +4,16 @@
     "artists": [
       {
         "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6LuN9FCkKOj5PcnpouEgny"
+          "spotify": "https://open.spotify.com/artist/2D4FOOOtWycb3Aw9nY5n3c"
         },
-        "href": "https://api.spotify.com/v1/artists/6LuN9FCkKOj5PcnpouEgny",
-        "id": "6LuN9FCkKOj5PcnpouEgny",
-        "name": "Khalid",
+        "href": "https://api.spotify.com/v1/artists/2D4FOOOtWycb3Aw9nY5n3c",
+        "id": "2D4FOOOtWycb3Aw9nY5n3c",
+        "name": "Declan McKenna",
         "type": "artist",
-        "uri": "spotify:artist:6LuN9FCkKOj5PcnpouEgny"
+        "uri": "spotify:artist:2D4FOOOtWycb3Aw9nY5n3c"
       }
     ],
     "available_markets": [
-      "AD",
       "AE",
       "AL",
       "AR",
@@ -43,7 +42,6 @@
       "EG",
       "ES",
       "FI",
-      "FR",
       "GB",
       "GR",
       "GT",
@@ -58,7 +56,6 @@
       "IS",
       "IT",
       "JO",
-      "JP",
       "KW",
       "KZ",
       "LB",
@@ -67,7 +64,6 @@
       "LU",
       "LV",
       "MA",
-      "MC",
       "MD",
       "ME",
       "MK",
@@ -108,48 +104,47 @@
       "ZA"
     ],
     "external_urls": {
-      "spotify": "https://open.spotify.com/album/6kf46HbnYCZzP6rjvQHYzg"
+      "spotify": "https://open.spotify.com/album/3HJiLDJgWA9Z0MvCxlzHYQ"
     },
-    "href": "https://api.spotify.com/v1/albums/6kf46HbnYCZzP6rjvQHYzg",
-    "id": "6kf46HbnYCZzP6rjvQHYzg",
+    "href": "https://api.spotify.com/v1/albums/3HJiLDJgWA9Z0MvCxlzHYQ",
+    "id": "3HJiLDJgWA9Z0MvCxlzHYQ",
     "images": [
       {
         "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b273988ede5e1276e758b5f9e577",
+        "url": "https://i.scdn.co/image/ab67616d0000b273ec8be21d32e663885fbb244e",
         "width": 640
       },
       {
         "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e02988ede5e1276e758b5f9e577",
+        "url": "https://i.scdn.co/image/ab67616d00001e02ec8be21d32e663885fbb244e",
         "width": 300
       },
       {
         "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d00004851988ede5e1276e758b5f9e577",
+        "url": "https://i.scdn.co/image/ab67616d00004851ec8be21d32e663885fbb244e",
         "width": 64
       }
     ],
-    "name": "American Teen",
-    "release_date": "2017-04-27",
+    "name": "What Do You Think About the Car?",
+    "release_date": "2017-07-21",
     "release_date_precision": "day",
-    "total_tracks": 15,
+    "total_tracks": 11,
     "type": "album",
-    "uri": "spotify:album:6kf46HbnYCZzP6rjvQHYzg"
+    "uri": "spotify:album:3HJiLDJgWA9Z0MvCxlzHYQ"
   },
   "artists": [
     {
       "external_urls": {
-        "spotify": "https://open.spotify.com/artist/6LuN9FCkKOj5PcnpouEgny"
+        "spotify": "https://open.spotify.com/artist/2D4FOOOtWycb3Aw9nY5n3c"
       },
-      "href": "https://api.spotify.com/v1/artists/6LuN9FCkKOj5PcnpouEgny",
-      "id": "6LuN9FCkKOj5PcnpouEgny",
-      "name": "Khalid",
+      "href": "https://api.spotify.com/v1/artists/2D4FOOOtWycb3Aw9nY5n3c",
+      "id": "2D4FOOOtWycb3Aw9nY5n3c",
+      "name": "Declan McKenna",
       "type": "artist",
-      "uri": "spotify:artist:6LuN9FCkKOj5PcnpouEgny"
+      "uri": "spotify:artist:2D4FOOOtWycb3Aw9nY5n3c"
     }
   ],
   "available_markets": [
-    "AD",
     "AE",
     "AL",
     "AR",
@@ -178,7 +173,6 @@
     "EG",
     "ES",
     "FI",
-    "FR",
     "GB",
     "GR",
     "GT",
@@ -193,7 +187,6 @@
     "IS",
     "IT",
     "JO",
-    "JP",
     "KW",
     "KZ",
     "LB",
@@ -202,7 +195,6 @@
     "LU",
     "LV",
     "MA",
-    "MC",
     "MD",
     "ME",
     "MK",
@@ -243,21 +235,21 @@
     "ZA"
   ],
   "disc_number": 1,
-  "duration_ms": 250746,
+  "duration_ms": 252306,
   "explicit": false,
   "external_ids": {
-    "isrc": "USRC11602480"
+    "isrc": "GBARL1500856"
   },
   "external_urls": {
-    "spotify": "https://open.spotify.com/track/312WNtMs3F28cUukaPY9bo"
+    "spotify": "https://open.spotify.com/track/4sNG6zQBmtq7M8aeeKJRMQ"
   },
-  "href": "https://api.spotify.com/v1/tracks/312WNtMs3F28cUukaPY9bo",
-  "id": "312WNtMs3F28cUukaPY9bo",
+  "href": "https://api.spotify.com/v1/tracks/4sNG6zQBmtq7M8aeeKJRMQ",
+  "id": "4sNG6zQBmtq7M8aeeKJRMQ",
   "is_local": false,
-  "name": "American Teen",
-  "popularity": 71,
-  "preview_url": "https://p.scdn.co/mp3-preview/3b4aa1b644a30474a3383594acf8b6ba6eba7fda?cid=ab825083fc7d4d37a8ccf96f88058dbc",
-  "track_number": 1,
+  "name": "Brazil",
+  "popularity": 75,
+  "preview_url": "https://p.scdn.co/mp3-preview/f38ba32aa9bbc5ce21f81e3b12598171aac00c73?cid=ab825083fc7d4d37a8ccf96f88058dbc",
+  "track_number": 2,
   "type": "track",
-  "uri": "spotify:track:312WNtMs3F28cUukaPY9bo"
+  "uri": "spotify:track:4sNG6zQBmtq7M8aeeKJRMQ"
 }
