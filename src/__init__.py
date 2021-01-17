@@ -168,7 +168,7 @@ class SpotifyAPI:
             This method makes a call to the Spotify Web API and returns the information in
             an Artist object containing the information about the artist. An artist ID can be
             found in the Spotify link to the artist: https://open.spotify.com/artist/{artist_id}.
-    
+
             :param artist_id: A String of the artist ID
             :return: An Artist object
         """

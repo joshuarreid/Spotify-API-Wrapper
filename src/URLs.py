@@ -1,6 +1,9 @@
+"""Library for containing Spotify Web API Urls.
+"""
+
 class URLs:
     """
-    The urls class is responsible for holding URL strings and serving them to the API Wrapper
+    The URLs class is responsible for containing URL strings and serving them to the API Wrapper.
     """
     def __init__(self, response_format='json'):
         self.format = response_format

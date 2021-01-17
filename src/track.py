@@ -1,3 +1,5 @@
+"""Library for organizing track information into functional objects.
+"""
 class Track:
     def __init__(self, name, album, artists, popularity, track_id, album_id, artists_id, duration_ms, explicit, release_date):
         self.name = name
