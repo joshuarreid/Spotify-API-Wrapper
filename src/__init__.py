@@ -1,7 +1,7 @@
 """Library for making calls to the Spotify Web API.
 
     Get information on artists, albums, tracks, and more. This module provides an easy
-    way to fetch spotify information and organizes them in functional objects.
+    way to fetch spotify information and organizes it in functional objects.
 
     Some Available methods:
     - get_album: Gets album information
@@ -15,9 +15,10 @@ import base64
 
 import requests
 
-from src.URLs import URLs
+from src.urls import URLs
 from src.artist import Artist
 from src.track import Track
+from src.album import Album
 
 
 class SpotifyAPI:
@@ -99,7 +100,7 @@ class SpotifyAPI:
 
 
 
-    def get_album(self, album_id):  # TODO return an Album object
+    def get_album(self, album_id):
         """ This method fetches album information from a Spotify album ID.
 
             This method makes a call to the Spotify Web API and returns the information in
@@ -109,17 +110,55 @@ class SpotifyAPI:
             :param album_id: A String of the album ID
             :return: An Album object
         """
-        return self.__get_data(self.url.albums_url().format(id=str(album_id)))
+
+        response = self.__get_data(self.url.albums_url().format(id=str(album_id)))
+        name = response['name']
+        album_type = response['album_type']
+        artists = []
+        for album_artists in response['artists']:
+            artists.append(album_artists['name'])
+        copyrights_list = []
+        for copyright in response['copyrights']:
+            copyrights_list.append(copyright['text'])
+        label = response['label']
+        popularity = response['popularity']
+        release_date = response['release_date']
+        total_tracks = response['total_tracks']
+        tracks = []
+        for album_track in response['tracks']['items']:
+            tracks.append(album_track['name'])
+        return Album(name, album_type, artists, album_id, copyrights_list, label, popularity, release_date,
+                     total_tracks, tracks)
 
 
 
-    def get_album_tracks(self, album_id):  # TODO return a list of Track objects
+    def get_album_tracks(self, album_id):
         """ This method returns a list of Track objects from a Spotify album ID.
 
             :param album_id: A String of the album ID
             :return: A list of Track objects
         """
-        return self.__get_data(self.url.albums_tracks_url().format(id=str(album_id)))
+        response = self.__get_data(self.url.albums_tracks_url().format(id=str(album_id)))
+        tracks = []
+        for album_track in response['tracks']['items']:
+            track = self.get_track(album_track['id'])
+            tracks.append(track)
+        return tracks
+
+
+
+    def get_album_artists(self, album_id):
+        """ This method returns a list of Artist objects from a Spotify album ID.
+
+            :param album_id: A String of the album ID
+            :return: A list of Artist objects
+        """
+        response = self.__get_data(self.url.albums_url().format(id=str(album_id)))
+        artists = []
+        for album_artists in response['artists']:
+            artist = self.get_artist(album_artists['id'])
+            artists.append(artist)
+        return artists
 
 
 
@@ -138,17 +177,29 @@ class SpotifyAPI:
         album = response['album']['name']
         album_id = response['album']['id']
         artists = []
-        artists_id = []
-        for artist in response['artists']:
-            artists.append(artist['name'])
-            artists_id.append(artist['id'])
+        for album_artists in response['artists']:
+            artists.append(album_artists['name'])
         duration_ms = response['duration_ms']
         explicit = response['explicit']
         release_date = response['album']['release_date']
         popularity = response['popularity']
         return Track(name=name, album=album, artists=artists, popularity=popularity, track_id=track_id,
-                     album_id=album_id,
-                     artists_id=artists_id, duration_ms=duration_ms, explicit=explicit, release_date=release_date)
+                     album_id=album_id, duration_ms=duration_ms, explicit=explicit, release_date=release_date)
+
+
+
+    def get_track_artists(self, track_id):
+        """ This method returns a list of Artist objects from a Spotify track ID.
+
+            :param album_id: A String of the track ID
+            :return: A list of Artist objects
+        """
+        response = self.__get_data(self.url.tracks_url().format(id=str(track_id)))
+        artists = []
+        for album_artists in response['artists']:
+            artist = self.get_artist(album_artists['id'])
+            artists.append(artist)
+        return artists
 
 
 

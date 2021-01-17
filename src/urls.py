@@ -20,9 +20,9 @@ class URLs:
 
         # Artists
         self.artists = 'artists/{id}'.format(format=self.format, id='{id}')
-        self.artists_albums = self.artists + '/albums'
-        self.artists_top_tracks = self.artists + '/top-tracks'
-        self.artists_related = self.artists + '/related-artists'
+        self.artists_albums = 'artists/{id}/albums'.format(format=self.format, id='{id}')
+        self.artists_top_tracks = 'artists/{id}/albums/top-tracks'.format(format=self.format, id='{id}')
+        self.artists_related = 'artists/{id}/albums/related-artists'.format(format=self.format, id='{id}')
 
 
 
